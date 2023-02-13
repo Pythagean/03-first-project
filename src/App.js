@@ -23,7 +23,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div id='background'>
       <section id="users-form">
         <UserForm onAddUser={addUserHandler} />
       </section>
