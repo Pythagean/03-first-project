@@ -12,11 +12,14 @@ function UserForm(props) {
     if (username.trim().length === 0 || age.trim().length === 0) {
       //setValidInput(false);
       setInvalidMessage("Username and Age must be entered");
+      props.onDisplayForm("Username and Age must be entered");
       return;
     }
 
     if (age < 0) {
       setInvalidMessage("Age must be greater than 0");
+      props.onDisplayForm("Age must be greater than 0");
+      return;
     }
 
     props.onAddUser(username, age);
